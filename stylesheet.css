@@ -8,34 +8,26 @@
 /* Import Montserrat from Google Fonts (for normal text) */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
-/* Scansky Condensed Semibold font */
-@font-face {
-  font-family: 'Scansky Condensed';
-  src: url('/fonts/scansky-condensedsemibold.woff2') format('woff2'),
-       url('/fonts/scansky-condensedsemibold.woff') format('woff'),
-       url('/fonts/scansky-condensedsemibold.otf') format('opentype');
-  font-weight: 600; /* semibold */
-  font-style: normal;
-}
-
-/* Scansky Light Font */
+/* Scansky Light */
 @font-face {
     font-family: 'Scansky Light';
-    src: url('fonts/Scansky-Light.otf') format('opentype');
+    src: url('fonts/scansky-light.woff2') format('woff2'),
+         url('fonts/scansky-light.woff') format('woff'),
+         url('fonts/scansky-light.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap; /* Ensures text is visible while font loads */
 }
 
-@import url(⁦https://db.onlinewebfonts.com/c/323180378d03a1101d19a0c6265cefed?family=Scansky+Condensed+SemiBold⁩);
-
+/* Scansky Condensed Semibold */
 @font-face {
-    font-family: "Scansky Condensed SemiBold";
-    src: url("⁦https://db.onlinewebfonts.com/t/323180378d03a1101d19a0c6265cefed.eot⁩");
-    src: url("⁦https://db.onlinewebfonts.com/t/323180378d03a1101d19a0c6265cefed.eot?#iefix⁩")format("embedded-opentype"),
-    url("⁦https://db.onlinewebfonts.com/t/323180378d03a1101d19a0c6265cefed.woff2⁩")format("woff2"),
-    url("⁦https://db.onlinewebfonts.com/t/323180378d03a1101d19a0c6265cefed.woff⁩")format("woff"),
-    url("⁦https://db.onlinewebfonts.com/t/323180378d03a1101d19a0c6265cefed.ttf⁩")format("truetype"),
-    url("⁦https://db.onlinewebfonts.com/t/323180378d03a1101d19a0c6265cefed.svg#Scansky⁩ Condensed SemiBold")format("svg");
+    font-family: 'Scansky Condensed';
+    src: url('fonts/scansky-condensedsemibold-webfont.woff2') format('woff2'),
+         url('fonts/scansky-condensedsemibold.woff') format('woff'),
+         url('fonts/scansky-condensedsemibold.otf') format('opentype');
+    font-weight: 600; /* Semibold */
+    font-style: normal;
+    font-display: swap;
 }
 
 /* Logo */
