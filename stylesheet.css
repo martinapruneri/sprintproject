@@ -72,6 +72,13 @@ h1, h2, h3, h4, h5, h6 {
   background: none;
   border: none;
   cursor: pointer;
+  color: #000; /* Force it to be black */
+}
+
+.burger:focus,
+.burger:active {
+  color: #000;
+  outline: none; /* optional: removes blue outline */
 }
 
 /* Logo */
@@ -221,7 +228,7 @@ h1, h2, h3, h4, h5, h6 {
 .services {
   padding: 2rem 0.5rem;
     text-align: center;
-    background-color: #f8f8f8;
+    background-color: #fff;
 }
 
 .services h2 {
