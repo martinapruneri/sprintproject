@@ -1,0 +1,684 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Import Montserrat from Google Fonts (for normal text) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Scansky Condensed Semibold font */
+@font-face {
+  font-family: 'Scansky Condensed';
+  src: url('/fonts/scansky-condensedsemibold.woff2') format('woff2'),
+       url('/fonts/scansky-condensedsemibold.woff') format('woff'),
+       url('/fonts/scansky-condensedsemibold.otf') format('opentype');
+  font-weight: 600; /* semibold */
+  font-style: normal;
+}
+
+/* Scansky Light Font */
+@font-face {
+    font-family: 'Scansky Light';
+    src: url('fonts/Scansky-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Logo */
+.logo img {
+  height: 20px;   /* wysokość obrazka */
+  width: auto;    /* zachowaj proporcje */
+}
+
+/* Body */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background: #fff;
+  color: #000;
+  max-width: 430px; /* iPhone 14 Pro Max width */
+  margin: auto;
+}
+
+/* Apply Scansky Condensed Semibold to headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Scansky Condensed', sans-serif;
+  font-weight: 600;
+}
+
+#side-menu nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 2rem; 
+  font-weight: 600;
+  font-family: 'Scansky-condensed', sans-serif;
+}
+
+/* Header as Flexbox */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4c7d4;
+  padding: 1rem;
+}
+
+/* Burger Button */
+.burger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Logo */
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Language Selector */
+.lang h4{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Slide-out menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #f4c7d4;
+  color: #fff;
+  transition: left 0.3s ease;
+  padding: 2rem 1rem;
+  z-index: 1000;
+}
+
+/* Styling for the menu container */
+#side-menu {
+  /* Position the menu over the entire viewport */
+  position: fixed;
+  top: -100%; /* Hides the menu above the screen */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Use the light pink color from the header */
+  background-color: #f4c7d4; 
+  
+  /* Add padding and spacing */
+  padding-top: 60px; /* To prevent content from being under the header */
+  box-sizing: border-box;
+  
+  /* Set the font and text alignment to match the design */
+  font-family: 'Scansky Condensed', sans-serif; 
+  text-align: center;
+  
+  /* Animate the slide down effect */
+  transition: top 0.5s ease-in-out;
+  
+  /* Ensure the menu is on top of other content */
+  z-index: 999; 
+}
+
+/* When the JavaScript adds the 'open' class, the menu slides down */
+#side-menu.open {
+  top: 0;
+}
+
+/* Styling for the menu links */
+#side-menu nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#side-menu nav ul li {
+  margin-bottom: 20px;
+}
+
+#side-menu nav a {
+  text-decoration: none;
+  color: #000;
+  font-family: Scansky Condensed, sans-serif;
+  font-size: 2rem; 
+  font-weight: bold;
+}
+
+/* Styling for the close button */
+#close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #000;
+}
+
+.side-menu.open {
+  left: 0;
+}
+.side-menu ul {
+  list-style: none;
+}
+.side-menu li {
+  margin: 1rem 0;
+}
+.side-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.close-btn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  float: right;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.hero-logo {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+.intro {
+  max-width: 800px;
+    margin: 2rem auto 0.5rem;
+    font-size: 1.1rem;
+    color: #161616;
+}
+
+.hero h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #080808;
+}
+.ratings h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+/* Services Section*/
+.services {
+  padding: 2rem 0.5rem;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.service-grid {
+   display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr 2fr;
+    gap: 0.5rem;
+    max-width: 100%;  
+    margin: 0 auto;
+    padding: 0 0.5rem;
+   
+}
+
+/* Service item wrapper */
+.service-item {
+ background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+  
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-text {
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-family: Scansky Condensed, sans-serif;
+    font-weight: bold;
+    color: #333;
+}
+
+/* iPhone 14 Pro Max specific adjustment (430px width) */
+@media (max-width: 430px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr); /* Keep 2 columns */
+        gap: 0.75rem; /* Even smaller gap for compact screens */
+    }
+    .service-text {
+        font-size: 1.1rem; /* Slightly smaller text */
+    }
+}
+
+/* Make all service images the same size */
+.service-grid img {
+  width: 100%;           /* Always fill column width */
+  height: 180px;         /* Set fixed height (adjust as you like) */
+  object-fit: cover;     /* Crop to fit nicely */
+  border-radius: 10px;   /* Keep rounded corners */
+}
+
+/* Why Choose */
+.why {
+    font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding: 4rem rem;
+}
+
+.why h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.why-box {
+  max-width: 1000px;
+  background: #e8f0f4;
+  margin: 0 auto 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.why-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.why-box p {
+    color: #555;
+}
+
+/* Booking button */
+
+
+
+.booking {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 0;
+}
+
+.booking-btn {
+  display: inline-block;
+  background: #c1d8e6;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  color: black;
+  font-family: 'Scansky Condensed', sans-serif;
+  margin-top: 0.5px ;
+}
+
+.booking-btn:hover {
+    background-color: #7185a4;
+}
+
+/* Socials */
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+.socials img {
+  width: 25px;
+  height: 25px;
+}
+
+/* Footer */
+.footer {
+  background: #f4c7d4;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  font-size: 1rem;
+}
+
+.footer-info {
+    font-size: 0.9 rem;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.footer-info p {
+  margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.footer-logo {
+   width: 30px;
+  margin-bottom: 1rem;
+}
+
+.back-to-top {
+  text-align: center;
+  background: #f4c7d4;
+  padding: 1rem;
+}
+
+.back-to-top a {
+  color: black;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: regular;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2fr);
+    }
+
+    .why-box {
+        max-width: 100%;
+    }
+}
+
+
+/* Other pages */
+
+
+/* Booking page section */
+.bookingpage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bookingpage-box {
+    background-color: #c1d8e6;
+    border-radius: 8px;
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.bookingpage-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bookingpage-box h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+
+/* Back Button Section */
+
+.back{
+  text-align: center;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+.back a {
+  display: inline-block;
+  background: #c1d8e6;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  color: black;
+  font-family: 'Scansky Condensed', sans-serif;
+}
+
+.back a:hover {
+    background-color: #8cafdb;
+}
+
+
+/* Question forms */
+.question-form {
+  max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+       font-family: 'Scansky Light', sans-serif; 
+       text-align: center;
+}
+
+.question-form h2 {
+  text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #202020;
+}
+
+.question-form label {
+  display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #000000;
+}
+.question-form textarea,
+.question-form input,
+.question-form button {
+  background-color: #c1d8e6;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  font-size: 14px;
+}
+
+.question-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.question-form input[type="file"] {
+  padding: 5px;
+}
+
+.question-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Scansky Light', sans-serif;
+    margin: 12px auto;
+}
+
+.question-form button[type="submit"]:hover {
+  background-color: #1f1f1f;
+}
+
+
+/* Question button section */
+
+.question {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 0.5rem;
+}
+.question-button {
+  display: inline-block;
+  margin: 2px;
+  background: black;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Scansky Condensed', sans-serif;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .bookingpage {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2rem 1rem;
+    }
+
+    .bookingpage-box {
+        height: 150px;
+    }
+}
+
+/* Send button */
+.send {
+  text-align: center;
+  padding: 2rem;
+}
+.send-button {
+  display: inline-block;
+  background: black;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Scansky Condensed', sans-serif;
+
+}
+
+
+
+/* Tattoo form */
+.tattoo-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 0;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+font-family: 'Scansky Light', sans-serif;
+font-size: medium;
+}
+
+.tattoo-form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.tattoo-form label {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.tattoo-form input,
+.tattoo-form textarea,
+.tattoo-form button {
+  background-color: #c1d8e6;
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  font-size: 16px;
+  font-size: 14px;
+}
+
+.tattoo-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.tattoo-form input[type="file"] {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.tattoo-form button {
+  margin: 12px auto;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Scansky Light', sans-serif;
+  font-size: 16px;
+}
+
+.tattoo-form button:hover {
+  background-color: #444;
+}
+
+

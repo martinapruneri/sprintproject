@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LE KRIB</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <a id="top"></a> 
+
+  <!-- HEADER -->
+  <header class="header">
+    <!-- Burger menu button -->
+    <button class="burger" id="burger-btn">&#9776;</button>
+
+    <!-- Logo always links back to homepage -->
+    <a href="index.html" class="logo">
+      <img src="images/LEKRIB_LOGO.png" alt="LE KRIB Logo">
+    </a>
+
+    <!-- Language selector -->
+    <div class="lang">DK</div>
+
+    <!--sliding mmenu down-->
+    <div id="side-menu">
+  <button id="close-btn">X</button>
+  <nav>
+    <ul>
+      <li><a href="bookingpage.html">BOOKING</a></li>
+      <li><a href="#">GALLERY</a></li>
+      <li><a href="#">ARTISTS</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+  </nav>
+</div>
+
+  </header>
+
+ <!-- BOOKING SECTION -->
+<section class="bookingpage">
+  <a href="tattoobook.html" class="bookingpage-box">
+    <h3>TATTOO</h3>
+  </a>
+  <div class="bookingpage-box">
+    <h3>TOOTH GEMS</h3>
+  </div>
+  <div class="bookingpage-box">
+    <h3>PIERCING</h3>
+  </div>
+  <div class="bookingpage-box">
+    <h3>LASER REMOVAL</h3>
+  </div>
+</section>
+
+<!-- QUESTION BUTTON -->
+  <section class="question">
+    <h4><a href="question.html" class="question-button">ASK A QUESTION</a></h4>
+  </section>
+
+<!-- BACK BUTTON -->
+  <section class="back">
+    <h3><a href="index.html" class="booking-btn">BACK</a></h3>
+  </section>
+
+  <!-- SOCIAL ICONS -->
+  <div class="socials">
+    <!-- Replace with icons/images if needed -->
+   <a href="https://www.facebook.com/lekribaarhus" target="_blank" rel="noopener noreferrer">
+    <img src="images/fb.svg" alt="Facebook"></a>
+  <a href="https://www.instagram.com/lekrib_aarhus/#" target="_blank" rel="noopener noreferrer">
+    <img src="images/instagram.svg" alt="Instagram">
+  </a>
+  <a href="https://www.tiktok.com/@lekrib_aarhus" target="_blank" rel="noopener noreferrer">
+    <img src="images/tiktok.svg" alt="TikTok">
+  </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <nav>
+    <img src="images/lekrib_logo.svg" alt="LE KRIB Logo" class="footer-logo">
+      <a href="#gallery">GALLERY</a>
+      <a href="#artists">ARTISTS</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="footer-info">
+    <p> <strong>Monday - Friday</strong> <br> 10–17 <br>
+    <strong> Saturday - Sunday</strong> <br> closed </p>
+    <p> <strong> Janus La Cours Gade 1 <br> 8000 Aarhus C</strong></p>
+    <p>Tlf: 50 13 02 98</p>
+    </div>
+  </footer>
+
+  <div class="back-to-top">
+  <a href="#top">⬆ Back to Top</a>
+</div>
+
+  <!-- JavaScript for menu -->
+  <script>
+    const burgerBtn = document.getElementById('burger-btn');
+const sideMenu = document.getElementById('side-menu');
+const closeBtn = document.getElementById('close-btn');
+
+// Open menu
+burgerBtn.addEventListener('click', () => {
+  sideMenu.classList.add('open');
+});
+
+// Close menu
+closeBtn.addEventListener('click', () => {
+  sideMenu.classList.remove('open');
+});
+  </script>
+</body>
+</html>
